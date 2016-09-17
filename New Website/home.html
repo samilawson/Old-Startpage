@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>New Website</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src=”https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js”></script>
+</head>
+<style>
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.col-sm-4{
+  background-color: #D9D9D9;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #D9D9D9;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+#title{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+    background-color: #EFEFEF;
+    text-decoration: none;
+}
+.jumbotron{
+  width: 100%;
+  background: rgba(35, 50, 55, 0.1);
+  color: white;
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  border-bottom: 16px solid #F8820B;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+
+</style>
+<body style="background-image: url(https://wallpaperscraft.com/image/city_night_church_lights_beauty_58859_1920x1080.jpg); background-size: cover" onload="myFunction()" style="margin:0;">
+
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+  <ul>
+    <li><a class="active" href="home.html">Home</a></li>
+    <li><a href="Project.html">Projects</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="search3.hmtl">Search</a></li>
+    <li id="title" style="float:right;">Samilawson.github.io</li>
+  </ul>
+  <div class="jumbotron">
+    <h1 align="center">Welcome</h1>
+  </div>
+
+  <div class="container" >
+    <div class="col-sm-4">
+      <h3 align = "center">Projects</h3>
+      <img src="https://s9.postimg.io/ycg4ehla7/codesnippet1.jpg" alt="HTML5 Icon" style="width:350px;height:350px;" align="center">
+      <p><a href="project.html">Here</a> you can find my projects. You can sort them by language or type.</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Box 2</h3>
+      <p>Text 2</p>
+    </div>
+    <div class="col-sm-4">
+      <h3>Box 3</h3>
+      <p>Text 3</p>
+    </div>
+  </div>
+</div>
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>New Website</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
+</head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #D9D9D9;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #EFEFEF;
+    text-decoration: none;
+}
+.jumbotron{
+  width: 100%;
+  background: rgba(35, 50, 55, 0.1);
+  color: white;
+}
+body{
+   background-image:url(https://wallpaperscraft.com/image/city_buildings_bridges_clouds_sea_night_lights_landscape_58848_1920x1080.jpg);
+}
+.col-sm-9{
+	background: rgba(223, 220, 227, 0.4);
+	color: black;
+	overflow: hidden;
+}
+.col-sm-3{
+	background: rgba(223, 220, 227, 0.4);
+	color: black;
+}
+a{
+	color: purple;
+}
+a:hover{
+	text-decoration: none;
+}
+</style>
+<body>
+<ul>
+  <li><a class="active" href="home.html">Home</a></li>
+  <li><a href="Project.html">Projects</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="search3.hmtl">Search</a></li>
+</ul>
+
+<div class="jumbotron">
+  <h1 align="center">Discord Bot Templates</h1>
+</div>
+<div class="container">
+	<div class="col-sm-3">
+		<h3>Template</h3>
+		<p>This is just an example of a basic bot setup that uses <a href="https://github.com/hydrabolt/discord.js/">discord.js</a>. Please note that you must have <a href="https://nodejs.org/en/">node.js</a> in order to run discord bots. You must also have a token and authorization. For help, please see this <a href="https://discordapp.com/developers/docs/intro">guide</a>.</p>
+	</div>
+	<div class="col-sm-9">
+		<h3>Code</h3>
+		<img src="https://s10.postimg.org/xvpnwghax/codesnippet2.jpg" class="img-responsive">
+		<pre><code>var Discord = require("discord.js");
+		var bot = new Discord.Client();
+			bot.on("ready", ()=> {
+			bot.setPlayingGame("namegoeshere")
+			});
+			bot.on("message", message => {
+			if(message.content === "textgoeshere"){
+				bot.reply(message, "textgoeshere"); 
+			} else if (message.content === "textgoeshere"){
+				bot.sendMessage(message, "textgoeshere");
+			}
+			});
+			bot.login("Bot" + settings.tokengoeshere);
+		</code></pre>
+		<p>This is a basic setup. If you want to add more text commands, just add more else if statements.</p>
+	</div>
+</div>
+
+
+</body>
+</html>
