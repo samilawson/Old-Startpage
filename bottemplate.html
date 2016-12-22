@@ -1,11 +1,14 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>New Website</title>
+<title>Bot Template</title>
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
 </head>
 <style>
+*{
+	font-family: Arial;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -53,6 +56,11 @@ a{
 a:hover{
 	text-decoration: none;
 }
+pre {
+    text-align: left;
+    white-space: pre-line;
+    width: 60%;
+  }
 </style>
 <body>
 <ul>
@@ -68,28 +76,30 @@ a:hover{
 <div class="container">
 	<div class="col-sm-3">
 		<h3>Template</h3>
-		<p>This is just an example of a basic bot setup that uses <a href="https://github.com/hydrabolt/discord.js/">discord.js</a>. Please note that you must have <a href="https://nodejs.org/en/">node.js</a> in order to run discord bots. You must also have a token and authorization. For help, please see this <a href="https://discordapp.com/developers/docs/intro">guide</a>.</p>
+		<p>This is just an example of a basic bot setup that uses <a href="https://github.com/hydrabolt/discord.js/">discord.js</a>. Please note that you must have <a href="https://nodejs.org/en/">node.js</a> in order to run discord bots. You must also have a token and authorization. For help deploying the bot, please see this <a href="https://discordapp.com/developers/docs/intro">guide</a>.</p>
 	</div>
 	<div class="col-sm-9">
 		<h3>Code</h3>
 		<img src="https://s10.postimg.org/xvpnwghax/codesnippet2.jpg" class="img-responsive">
-		<pre><code>var Discord = require("discord.js");
-		var bot = new Discord.Client();
-			bot.on("ready", ()=> {
-			bot.setPlayingGame("namegoeshere")
-			});
-			bot.on("message", message => {
-			if(message.content === "textgoeshere"){
-				bot.reply(message, "textgoeshere"); 
-			} else if (message.content === "textgoeshere"){
-				bot.sendMessage(message, "textgoeshere");
-			}
-			});
-			bot.login("Bot" + settings.tokengoeshere);
-		</code></pre>
-		<p>This is a basic setup. If you want to add more text commands, just add more else if statements.</p>
+		<pre>var Discord = require("discord.js");<br />
+			var bot = new Discord.Client();<br />
+			bot.on("ready", ()=> {<br />
+			bot.user.setGame("namegoeshere")<br />
+			});<br />
+			bot.on("message", msg => {<br />
+			&nbsp;&nbsp;if(msg.content == "textgoeshere"){<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;bot.channel.sendMessage("textgoeshere");<br />			
+				&nbsp;&nbsp;} else if (msg.content == "textgoeshere"){<br />
+				&nbsp;&nbsp;&nbsp;&nbsp;bot.channel.sendMessage("textgoeshere");<br />
+			&nbsp;&nbsp;}<br />
+			});<br />
+			bot.login(tokengoeshere);<br />
+		</pre>
 	</div>
 </div>
+		<p>This is a basic setup. If you want to add more text commands, just add more else if statements.</p>
+		<p>Basic Terms: if(message.content === "textgoeshere") reads a message and if it matches textgoeshere, will evaluate the if statement. If not, it will move on to the else if statement. If it still does not match, then the bot will not post anything. For example, if textgoeshere(in the if statement) was set to "Hello", and a message was sent that says "Hello", then the if statement will evaluate.</p>
+	
 
 
 </body>

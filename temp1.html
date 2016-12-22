@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Template Source</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<style>
+*{
+	font-family: Arial;
+}
+.jumbotron{
+	text-align: center;
+}
+a{
+	text-decoration: none;
+	border: 2px solid black;
+	font-size: 18px;
+	margin: 2px;
+}
+a:hover{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+</style>
+
+</head>
+<body>
+<a href="template1.html">Back</a>
+<div class="container">
+	<div class="jumbotron">
+		<h2>Home Page Source Code</h2>
+	</div>
+<pre>
+&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;link rel=&quot;stylesheet&quot; href=&quot;http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;&gt;<br />
+&lt;style&gt;<br />
+ul {<br />
+&nbsp;&nbsp;list-style-type: none;<br />
+&nbsp;&nbsp;margin: 0;<br />
+&nbsp;&nbsp;padding: 0;<br />
+&nbsp;&nbsp;overflow: hidden;<br />
+&nbsp;&nbsp;background-color: #D9D9D9;<br />
+}<br />
+li {<br />
+&nbsp;&nbsp;float: left;<br />
+}<br />
+li a {<br />
+&nbsp;&nbsp;display: block;<br />
+&nbsp;&nbsp;color: black;<br />
+&nbsp;&nbsp;text-align: center;<br />
+&nbsp;&nbsp;padding: 14px 16px;<br />
+&nbsp;&nbsp;text-decoration: none;<br />
+}<br />
+li a:hover {<br />
+&nbsp;&nbsp;background-color: #EFEFEF;<br />
+&nbsp;&nbsp;text-decoration: none;<br />
+}<br />
+.jumbotron{<br />
+&nbsp;&nbsp;width: 100%;<br />
+&nbsp;&nbsp;background: rgba(35, 50, 55, 0.1);<br />
+&nbsp;&nbsp;color: white;<br />
+}<br />
+.col-sm-4{<br />
+&nbsp;&nbsp;background-color: #d9d9d9;<br />
+}<br />
+#loader {<br />
+&nbsp;&nbsp;position: absolute;<br />
+&nbsp;&nbsp;left: 50%;<br />
+&nbsp;&nbsp;top: 50%;<br />
+&nbsp;&nbsp;z-index: 1;<br />
+&nbsp;&nbsp;width: 150px;<br />
+&nbsp;&nbsp;height: 150px;<br />
+&nbsp;&nbsp;margin: -75px 0 0 -75px;<br />
+&nbsp;&nbsp;border: 16px solid #f3f3f3;<br />
+&nbsp;&nbsp;border-radius: 50%;<br />
+&nbsp;&nbsp;border-top: 16px solid #3498db;<br />
+&nbsp;&nbsp;border-bottom: 16px solid #F8820B;<br />
+&nbsp;&nbsp;width: 120px;<br />
+&nbsp;&nbsp;height: 120px;<br />
+&nbsp;&nbsp;-webkit-animation: spin 2s linear infinite;<br />
+&nbsp;&nbsp;animation: spin 2s linear infinite;<br />
+}<br />
+@-webkit-keyframes spin {<br />
+&nbsp;&nbsp;0% { -webkit-transform: rotate(0deg); }<br />
+&nbsp;&nbsp;100% { -webkit-transform: rotate(360deg); }<br />
+}<br />
+@keyframes spin {<br />
+&nbsp;&nbsp;0% { transform: rotate(0deg); }<br />
+&nbsp;&nbsp;100% { transform: rotate(360deg); }<br />
+}<br />
+/* Add animation to "page content" */<br />
+.animate-bottom {<br />
+&nbsp;&nbsp;position: relative;<br />
+&nbsp;&nbsp;-webkit-animation-name: animatebottom;<br />
+&nbsp;&nbsp;-webkit-animation-duration: 1s;<br />
+&nbsp;&nbsp;animation-name: animatebottom;<br />
+&nbsp;&nbsp;animation-duration: 1s<br />
+}<br />
+@-webkit-keyframes animatebottom {<br />
+&nbsp;&nbsp;from { bottom:-100px; opacity:0 } <br />
+&nbsp;&nbsp;to { bottom:0px; opacity:1 }<br />
+}<br />
+@keyframes animatebottom { <br />
+&nbsp;&nbsp;from{ bottom:-100px; opacity:0 } <br />
+&nbsp;&nbsp;to{ bottom:0; opacity:1 }<br />
+}<br />
+#myDiv {<br />
+&nbsp;&nbsp;display: none;<br />
+&nbsp;&nbsp;text-align: center;<br />
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body style=&quot;background-image: url(https://wallpaperscraft.com/image/city_night_church_lights_beauty_58859_1920x1080.jpg); background-size: cover&quot; onload=&quot;myFunction()&quot; style=&quot;margin:0;&quot;&gt;
+&lt;div id=&quot;loader&quot;&gt;<br />
+&lt;/div&gt;<br />
+&lt;div style=&quot;display:none;&quot; id=&quot;myDiv&quot; class=&quot;animate-bottom&quot;&gt;
+&lt;div class=&quot;jumbotron&quot;&gt;<br />
+&nbsp;&nbsp;&lt;h1 align=&quot;center&quot;&gt;Welcome&lt;/h1&gt;<br />
+&lt;/div&gt;
+&lt;div class=&quot;container&quot;&gt;<br />
+&nbsp;&nbsp;&lt;div class=&quot;row&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;col-sm-4&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;col-sm-4&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class=&quot;col-sm-4&quot;&gt;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br />
+&nbsp;&nbsp;&lt;/div&gt;<br />
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;script&gt;<br />
+var myVar;<br />
+
+function myFunction() {<br />
+&nbsp;&nbsp;myVar = setTimeout(showPage, 3000);<br />
+}<br />
+
+function showPage() {<br />
+&nbsp;&nbsp;document.getElementById(&quot;loader&quot;).style.display = &quot;none&quot;;<br />
+&nbsp;&nbsp;document.getElementById(&quot;myDiv&quot;).style.display = &quot;block&quot;;<br />
+}<br />
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+</body>
+
+</html>
