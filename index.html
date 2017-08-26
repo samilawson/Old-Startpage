@@ -1,89 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Samilawson.github.io</title>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
-</head>
-<style>
-html{
-  height: 100%;
-}
-body {
-  font-family: "Arial", sans-serif;
-  background-color: #4484CE; 
-}
-.title1{
-  color: black;
-}
+	<head>
+		<title>StartPage</title>
+		
+		<link rel='stylesheet' href='index.css'/>
+	</head>
+	<body>
+	<h2>samilawson.github.io</h2>
+		<input type="text" id="search box" class="searchbox" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="" onkeypress="return searchKeyPress(event)"></input>
+		<span id="statusbar" class="statusbar">
+			<div id="mode" class="statusbox mode">I</div>
+			<div id="file" class="statusbox file">index.html</div>
 
-img{
-  display: block;
-  margin: auto;
-  width: 40%;
-}
+			<div id="time" class="statusbox time">
+				<script>
+					var interval;
+					function updateTime() {
+						interval = setInterval(writeTime, 1000);
+					}
+					function writeTime() {
+						var now = new Date();
+						function hours() {
+							if (now.getHours().toString().length < 2) {
+								return "0" + now.getHours();
+							} else {
+								return now.getHours();
+							}
+						}
+						function mins() {
+							if (now.getMinutes().toString().length < 2) {
+								return "0" + now.getMinutes();
+							} else {
+								return now.getMinutes();
+							}
+						}
+						document.getElementById("time").innerHTML = hours() + ":" + mins() + "&nbsp;";
+					}
+					
+					updateTime();
+					writeTime();
+				</script>
+			</div>
+		</span>
 
-.jumbotron{
-  width: 100%;
-  background: rgba(227, 226, 226, 0.1);
-}
-.header1{
-  color: black;
-}
-.col-sm-4{
-  background-color: #D9D9D9;
-}
-.back-to-top {
-background: none;
-margin: 0;
-position: fixed;
-bottom: 0;
-right: 0;
-width: 90px;
-height: 30px;
-z-index: 100;
-display: none;
-text-decoration: none;
-color: black;
-background-color: #CCD7E0;
- 
-}
-a:hover{
-  text-decoration: none;
-  color: blue;
-}
-.ghost-button {
-  display: inline-block;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  width: 200px;
-  margin: 0 0 0 -100px;
-  color: #FFF;
-  font-size: 22px;
-  text-decoration: none;
-  text-align: center;
-  border: 1px solid #FFF;
-  border-radius: 16px;
-  padding-left: 1%;
-  padding-right: 1%;
-}
-.ghost-button:hover, .ghost-button:active {
-  color:#fff;
-  background:#67AECA;
-}
-</style>
-<body style="background-image: url(http://www.blirk.net/wallpapers/1920x1080/night-city-wallpaper-16.jpg); background-size: cover">
-  <div class="page-header">
-    <h1 class="title1">Samilawson.github.io</h1>
-  </div>
-  
-  <div class="jumbotron">
-    <p align="center" class="header1">Welcome to my site! Here you can find all of my projects, from webpages to bots and more!</p>
-    <a class="ghost-button" href="home.html">Enter</a>
-  </div>
-  
-
-
-</body>
-</html> 
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
