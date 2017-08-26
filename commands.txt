@@ -26,7 +26,7 @@ reddit
 reddit [-r][-u] [arg]
 	-r  Go to subreddit [arg]
 	-u  Go to user [arg]
-reddit [df][wg][up][sp]
+reddit [mus][muspr][ph][sp]
 	mus  /r/ModelUSGov
 	muspr  /r/ModelUSPress
 	ph  /r/ProgrammerHumor
