@@ -14,7 +14,7 @@ var instaregex = /^i(nsta(gram)?|g)/i;
 function search() {
 	console.log("Googling \"" + box.value + "\"");
 	console.log("Encoded query: \n" + encodeURIComponent(box.value));
-	document.location.href = "https://www.bing.com/search?q=" + encodeURIComponent(box.value);
+	document.location.href = "https://www.google.com/search?q=" + encodeURIComponent(box.value);
 }
 
 // if not search, nav to somewhere
