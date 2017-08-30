@@ -1,5 +1,5 @@
 var box = document.getElementById("search box");
-
+ 
 // this should catch most URLs, or at least the ones I would type.
 var urlPattern = /^(https?:\/\/)?[^ ]+[.][^ ]+([.][^ ]+)*(\/[^ ]+)?$/i;
 // regex for a hashtag taken straight from twitter's source code
@@ -10,7 +10,7 @@ var handy = /^(google|gmail|dropbox)$/i;
 
 var instaregex = /^i(nsta(gram)?|g)/i;
 
-// search for text in text box
+// google text in text box
 function search() {
 	console.log("Googling \"" + box.value + "\"");
 	console.log("Encoded query: \n" + encodeURIComponent(box.value));
@@ -77,6 +77,12 @@ function parseCom(com) {
 			nav(com);
 		}
 		// if all else fails, google it
+		else {
+			search();
+		}
+	}
+	else if (com.startsWith("waka")==true){
+		nav("https://wakatime.com/dashboard");
 		else {
 			search();
 		}
