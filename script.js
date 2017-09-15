@@ -133,7 +133,9 @@ function parseCom(com) {
 			search();
 		}
 	}
-	
+	else if (com.startsWith("music")==true){
+		nav ("https://docs.google.com/spreadsheets/d/1l-7tAfUR6nzNjj9m6DiW0j9sR6nWQWchCB2TT6noejk/edit#gid=0");	
+	}
 	// handle twt command
 	else if (com.startsWith("twt")==true) {
 		// if matches the "twt" command
